@@ -2,6 +2,7 @@ package me.wiput.sop.smart_shop;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,6 +17,16 @@ public class SmartShopApplication {
   @RequestMapping("/")
   String index() {
     return "Hi!";
+  }
+
+  @RequestMapping("/menus")
+  BubbleTeaMenu[] viewBubbleTeaMenuList() {
+    return BubbleTeaMenuFactory.viewBubbleTeaMenuList();
+  }
+
+  @RequestMapping("/menu/{id}")
+  BubbleTeaMenu viewBubbleTeaMenu(@PathVariable int id) {
+    return BubbleTeaMenuFactory.viewBubbleTeaMenu(id);
   }
 
 }

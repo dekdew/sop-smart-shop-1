@@ -40,12 +40,16 @@ public class BubbleTea {
   }
 
   public void setToppings(int[] toppings) throws InvalidToppingException {
+    ArrayList<String> toppingsList = new ArrayList<String>();
+
     for (int topping : toppings) {
       if (topping >= allToppings.length) {
         throw new InvalidToppingException("Invalid Topping!");
       } else {
-        this.toppings.add(allToppings[topping]);
+        toppingsList.add(allToppings[topping]);
       }
     }
+
+    this.toppings = toppingsList;
   }
 }
