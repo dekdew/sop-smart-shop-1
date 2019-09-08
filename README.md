@@ -12,7 +12,7 @@ Method : `GET`
 
 Code : `200 OK`
 
-Content examples
+Response example
 
 ```json
 [
@@ -54,7 +54,7 @@ Method : `POST`
 
 Code : `200 OK`
 
-Body examples
+Body example
 
 ```json
 {
