@@ -42,7 +42,7 @@ public class SmartShopApplication {
     return "Hi!";
   }
 
-  @GetMapping("/menus")
+  @GetMapping("/menu")
   public List<BubbleTeaMenuModel> viewBubbleTeaMenuList() {
     return bubbleTeaMenuRepository.findAll();
   }
