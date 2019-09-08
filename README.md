@@ -1,17 +1,18 @@
 # Bubble Tea Shop
+Bubble Tea Shop API written in Spring Boot with Hibernate
 
 ## Usage
 
 ### List all bubble tea menus
-**URL** : `/menu/`
+URL : `/menu`
 
-**Method** : `GET`
+Method : `GET`
 
 **Success Response**
 
-**Code** : `200 OK`
+Code : `200 OK`
 
-**Content examples**
+Content examples
 
 ```json
 [
@@ -42,4 +43,42 @@
         }
     }
 ]
+```
+
+### Create new bubble tea menu
+URL : `/menu`
+
+Method : `POST`
+
+**Success Response**
+
+Code : `200 OK`
+
+Body examples
+
+```json
+{
+    "isLarge": true,
+    "price": 80,
+    "name": "Classic Bubble Tea (Large)",
+    "bubbleTeaId": 6
+}
+```
+
+Response example
+
+```json
+{
+    "id": 2,
+    "isLarge": true,
+    "price": 80,
+    "name": "Classic Bubble Tea (Large)",
+    "bubbleTea": {
+        "id": 6,
+        "sugarLevel": 0.75,
+        "toppings": [
+            "Bubble"
+        ]
+    }
+}
 ```
