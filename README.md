@@ -1,6 +1,29 @@
 # Bubble Tea Shop
 Bubble Tea Shop API written in Spring Boot with Hibernate
 
+## System Requirements
+- JDK 11 or higher
+- PostgreSQL
+
+## Quick Start
+1. Clone the repository
+2. Create database in PostgreSQL
+3. Config Spring Data Source in `application.properties`
+default configuration
+```
+## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+spring.datasource.url=jdbc:postgresql://localhost:5432/{Database name}
+spring.datasource.username=postgres
+spring.datasource.password=
+
+# The SQL dialect makes Hibernate generate better SQL for the chosen database
+spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults = false
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
+
+# Hibernate ddl auto (create, create-drop, validate, update)
+spring.jpa.hibernate.ddl-auto = update
+```
+
 ## Usage
 
 ### List all bubble teas
